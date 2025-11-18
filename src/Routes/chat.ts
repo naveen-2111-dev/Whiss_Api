@@ -7,7 +7,6 @@ export async function Chat(req: Request, res: Response) {
         const { message } = req.body;
         const { roomId, ip } = req.params;
 
-        console.log(message);
         if (!roomId) {
             return res.status(400).json({ success: false, message: "room id not found" });
         }
